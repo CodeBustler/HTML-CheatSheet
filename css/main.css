@@ -1,0 +1,321 @@
+/* FONT APIs */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* VARIABLES */
+:root {
+  --font-family: "Poppins", sans-serif;
+  --fontSize-head: 18px;
+  --fontSize-para: 14px;
+  --color-yellow: #f1c40f;
+}
+
+/* UNIVERSAL STYLING */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  /* height: 100vh; */
+  margin: auto;
+  background-color: black;
+  position: relative;
+}
+
+/* START FROM HERE */
+
+/* HEADER  */
+
+header {
+  /* max-width: 1400px; */
+  /* margin: auto; */
+  background-color: black;
+  z-index: 10;
+  position: sticky;
+  top: 0;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+}
+
+.branding a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+header h1 {
+  padding: 10px;
+  color: white;
+  font-size: large;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.562);
+}
+
+.credit,
+.credit a {
+  color: grey;
+  text-decoration: none;
+}
+
+hr {
+  opacity: 0.1;
+  margin: 5px 0;
+}
+
+/* .attribute {
+  display: block;
+  text-align: center;
+  color: rgba(128, 128, 128, 0.877);
+} */
+
+/* MAIN CONTAINER */
+main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.content-box {
+  flex: 1 1 auto;
+  margin: 20px;
+  color: white;
+  list-style-position: inside;
+  padding: 8px 0;
+  border-radius: 10px;
+  width: 400px;
+  height: max-content;
+  background-color: rgb(27, 27, 27);
+  border: 1px solid rgba(128, 128, 128, 0.315);
+}
+
+.concept-name {
+  text-align: center;
+  font-weight: 500;
+  color: #f8835f;
+}
+
+.attributes-card .concept-name {
+  color: #e1fa72;
+}
+
+.concept-list {
+  margin-top: 8px;
+  padding: 10px 15px;
+  border-top: 1px solid rgba(128, 128, 128, 0.253);
+}
+
+.concept-list li a {
+  width: 100%;
+}
+.concept-list li span {
+  margin: 2px 0;
+}
+
+.concept-list a {
+  color: white;
+  font-weight: 400;
+  text-decoration: none;
+  width: 100%;
+}
+
+.element {
+  display: inline-block;
+  width: 100px;
+}
+
+.more-space {
+  width: 160px;
+}
+
+.more-space2 {
+  width: 120px;
+}
+
+.describe {
+  color: rgba(128, 128, 128, 0.877);
+}
+
+.input-type {
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: rgb(255, 244, 183);
+}
+
+/* SCROLL BAR */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(58, 58, 58);
+  border-radius: 10px;
+  transition: 1s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 68, 0, 0.582);
+  transition: 1s;
+}
+
+.inputs-card li a .element {
+  width: 260px;
+}
+
+.inputs-card li a .describe {
+  display: block;
+  margin-left: 30px;
+}
+
+.inputs-card hr {
+  margin: 15px 0;
+}
+
+.events-card .element {
+  width: 160px;
+}
+
+.resources-card .element {
+  width: 350px;
+}
+
+.resources-card li {
+  list-style-type: none;
+}
+
+i {
+  color: grey;
+  padding-right: 10px;
+}
+
+.grey {
+  color: grey;
+}
+
+.resources-card a:hover {
+  transition: 0.3s;
+  color: #f8835f;
+}
+
+footer {
+  padding: 18px;
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+  font-weight: 300;
+  background-color: rgb(27, 27, 27);
+  border-top: 1px #f8835f solid;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer a:hover {
+  transition: 0.3s;
+  color: #f8835f;
+}
+
+footer span {
+  color: grey;
+}
+
+footer .social-media {
+  font-size: large;
+}
+
+footer .social-media * {
+  margin-left: 3px;
+}
+
+@media screen and (max-width: 910px) {
+  .column-1,
+  .column-2,
+  .column-3,
+  .column-4,
+  .column-5,
+  .column-6 {
+    width: 100%;
+  }
+
+  .content-box {
+    width: 95%;
+    margin: 0px auto;
+    margin-top: 25px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .my-projects {
+    display: none;
+  }
+}
+
+.top-bottom {
+  z-index: 10;
+  position: fixed;
+  right: -2px;
+  bottom: 70px;
+  opacity: 0.2;
+}
+
+.top-bottom:hover {
+  transition: 0.7s;
+  opacity: 1;
+}
+.top-bottom * {
+  font-size: 27px;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 420px) {
+  .credit {
+    display: none;
+  }
+
+  li a span {
+    display: block;
+  }
+
+  .describe {
+    padding-left: 20px;
+  }
+
+  .inputs-card li a .describe {
+    display: block;
+    margin-left: 10px;
+  }
+
+  .cb-credit {
+    font-size: 14px;
+    padding-bottom: 8px;
+  }
+}
