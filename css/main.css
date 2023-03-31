@@ -31,6 +31,37 @@ body {
   transition: 1s;
 }
 
+.other {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.other-links-top,
+.other-links-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.other-links-top a,
+.other-links-bottom a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.o_cs {
+  background-color: rgb(27, 27, 27);
+  padding: 7px 13px;
+  border-radius: 5px;
+}
+
+.other-links-bottom {
+  display: none;
+}
 /* START FROM HERE */
 
 /* HEADER  */
@@ -77,12 +108,6 @@ hr {
   opacity: 0.1;
   margin: 5px 0;
 }
-
-/* .attribute {
-  display: block;
-  text-align: center;
-  color: rgba(128, 128, 128, 0.877);
-} */
 
 /* MAIN CONTAINER */
 main {
@@ -140,6 +165,7 @@ main {
   width: 100px;
 }
 
+/* Tag-Div Extra Space */
 .more-space {
   width: 160px;
 }
@@ -153,12 +179,14 @@ main {
 }
 
 .input-type {
+  text-align: center;
   font-weight: 400;
   letter-spacing: 1px;
   color: rgb(255, 244, 183);
 }
 
 /* SCROLL BAR */
+
 /* width */
 ::-webkit-scrollbar {
   width: 8px;
@@ -183,6 +211,9 @@ main {
   transition: 1s;
 }
 
+/* ---------------------------- */
+
+/* Indiudual Card Styling  */
 .inputs-card li a .element {
   width: 260px;
 }
@@ -210,7 +241,7 @@ main {
 
 i {
   color: grey;
-  padding-right: 10px;
+  padding-right: 0px;
 }
 
 .grey {
@@ -222,6 +253,7 @@ i {
   color: #f8835f;
 }
 
+/* FOOTER */
 footer {
   padding: 18px;
   margin-top: 20px;
@@ -257,6 +289,30 @@ footer .social-media * {
   margin-left: 3px;
 }
 
+/* PAGE TOP & BOTTOM */
+.top-bottom {
+  z-index: 10;
+  position: fixed;
+  right: -2px;
+  bottom: 70px;
+  opacity: 0.2;
+}
+.top-bottom i,
+.fa-link,
+.social-media i {
+  padding-right: 8px;
+}
+
+.top-bottom:hover {
+  transition: 0.7s;
+  opacity: 1;
+}
+.top-bottom * {
+  font-size: 27px;
+  margin-top: 5px;
+}
+
+/* MEDIA QUERY | Tablet */
 @media screen and (max-width: 910px) {
   .column-1,
   .column-2,
@@ -283,21 +339,11 @@ footer .social-media * {
   }
 }
 
-.top-bottom {
-  z-index: 10;
-  position: fixed;
-  right: -2px;
-  bottom: 70px;
-  opacity: 0.2;
-}
-
-.top-bottom:hover {
-  transition: 0.7s;
-  opacity: 1;
-}
-.top-bottom * {
-  font-size: 27px;
-  margin-top: 5px;
+/* MEDIA QUERY | Mobile */
+@media screen and (max-width: 520px) {
+  .credit {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -321,5 +367,14 @@ footer .social-media * {
   .cb-credit {
     font-size: 14px;
     padding-bottom: 8px;
+  }
+
+  .other-links-top {
+    display: none;
+  }
+  .other-links-bottom {
+    display: inherit;
+    width: fit-content;
+    margin: auto;
   }
 }
